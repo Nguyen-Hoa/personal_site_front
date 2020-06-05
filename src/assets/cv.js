@@ -37,7 +37,7 @@ var curriculum_vitae = {
     ],
 
     /* Employment */
-    emplyment: [
+    employment: [
         {
             location: "UC Merced, Center for Engaged Teaching and Learning",
             position: "SATAL Intern",
@@ -131,6 +131,9 @@ var curriculum_vitae = {
         }
     },
 }
+
+module.exports = curriculum_vitae;
+//export default curriculum_vitae;
 
 /** Templates **/
 
