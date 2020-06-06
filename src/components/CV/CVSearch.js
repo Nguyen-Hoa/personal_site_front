@@ -20,7 +20,6 @@ function CVSearch(cv, value, res) {
             for (v in cv[sections[x]]){
                 if (find_val(cv[sections[x]][v], keyword)) {
                     console.log(`Found ${keyword} in ${sections[x]}`);
-                    //console.log(cv[sections[x]][v]);
                     res.push(cv[sections[x]][v])
                 }    
             }
@@ -32,7 +31,6 @@ function CVSearch(cv, value, res) {
 }
 
 var res = [];
-
 CVSearch(my_cv, "merced", res);
 console.log(res);
 
