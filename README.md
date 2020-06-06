@@ -7,7 +7,8 @@
 
 # CVSearch
 * test file to verify output
-* display/render results
+* display/render results {scratch resultRenderer? opt for listing below?}
+* render complete cv 
 
 # WebGL Model
 * Blender animations {Ollie, Heelflip, Pop Shove-it, Inward Heelflip}

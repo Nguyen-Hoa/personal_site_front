@@ -16,11 +16,11 @@ class ContactMessage extends Component {
             <Form.Group widths='equal'>
             <Form.Field
                 control={Input}
-                placeholder='First name'
+                placeholder='Contact Name'
             />
             <Form.Field
                 control={Input}
-                placeholder='Last name'
+                placeholder='Organization'
             />
             </Form.Group>
             

@@ -132,8 +132,11 @@ var curriculum_vitae = {
     },
 }
 
-module.exports = curriculum_vitae;
-//export default curriculum_vitae;
+// React, ES6
+export default curriculum_vitae;
+
+// old JS
+// module.exports = curriculum_vitae;
 
 /** Templates **/
 

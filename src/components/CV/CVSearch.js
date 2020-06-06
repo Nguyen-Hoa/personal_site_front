@@ -1,36 +1,41 @@
-const my_cv = require('./../assets/cv');
+import {Component} from 'react';
 
-// Determine if current prop is a parent
-function isLeaf(obj) {
-    return Object.getOwnPropertyNames(obj).includes('length');
-}
+export default class CVSearch extends Component{
 
-// Find keyword in object, case insensitive
-function find_val(obj, keyword) {
-    return JSON.stringify(obj).toLowerCase().includes(keyword);
-}
-
-// Search for value using DFS on javascript object
-function CVSearch(cv, value, res) {
-    let sections = Object.getOwnPropertyNames(cv);
-    let keyword = value.toLowerCase();
-
-    for (x in sections) {
-        if (isLeaf(cv[sections[x]])) {
-            for (v in cv[sections[x]]){
-                if (find_val(cv[sections[x]][v], keyword)) {
-                    console.log(`Found ${keyword} in ${sections[x]}`);
-                    res.push(cv[sections[x]][v])
-                }    
-            }
-        }
-        else {
-            CVSearch(cv[sections[x]], keyword);
-        }    
+    // Determine if current prop is a parent
+    isLeaf(obj) {
+        return Object.getOwnPropertyNames(obj).includes('length');
     }
+
+    // Find keyword in object, case insensitive
+    find_val(obj, keyword) {
+        return JSON.stringify(obj).toLowerCase().includes(keyword);
+    }
+
+    search(value, cv) {
+        let result = [];
+        this.CVSearch(value, cv, result);
+        return result;
+    }
+
+    // Search for value using DFS on javascript object, case insensitive
+    CVSearch(value, cv, result) {
+        let sections = Object.getOwnPropertyNames(cv);
+        let keyword = value.toString().toLowerCase();
+
+        for (let x in sections) {
+            if (this.isLeaf(cv[sections[x]])) {
+                for (let v in cv[sections[x]]){
+                    if (this.find_val(cv[sections[x]][v], keyword)) {
+                        //console.log(`Found ${keyword} in ${sections[x]}`);
+                        result.push(cv[sections[x]][v])
+                    }    
+                }
+            }
+            else {
+                this.CVSearch(keyword, cv[sections[x]], result);
+            }    
+        }
+    }
+
 }
-
-var res = [];
-CVSearch(my_cv, "merced", res);
-console.log(res);
-
