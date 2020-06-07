@@ -121,7 +121,8 @@ var curriculum_vitae = {
                 "GLSL",
             ],
             machine_learning: [
-
+                "Tensorflow",
+                "Numpy",
             ],
             web: [
                 "React",

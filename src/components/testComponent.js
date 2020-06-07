@@ -7,7 +7,7 @@ import curriculum_vitae from './../assets/cv'
 
 const initialState = { isLoading: false, results: [], value: '' }
 const source = curriculum_vitae;
-const resultRenderer = ({ position }) => <Label content={position} />
+const resultRenderer = (result) => <Label content={result.location} />
 const SearchEngine = new CVSearch();
 
 export default class SearchExampleStandard extends Component {
