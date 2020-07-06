@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Segment, } from 'semantic-ui-react';
+import { Container, } from 'semantic-ui-react';
 import BaseCVRender from ".//BaseCVRender";
 import { 
     render_employment, 
@@ -16,9 +16,14 @@ export default class CVFull extends Component {
         super(props);
     }
 
+    /*Dev
+        DOM should only be width of text, not screen
+        Able to fit elsewhere
+     */
+
     render(){
         return(
-            <Segment>
+            <Container>
                 <h1>Employment</h1>
                 <BaseCVRender 
                     content={this.props.cv.employment}
@@ -66,7 +71,7 @@ export default class CVFull extends Component {
                     renderer={render_list}
                 />
 
-            </Segment>
+            </Container>
         )
     }
 }

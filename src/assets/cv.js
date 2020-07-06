@@ -107,8 +107,8 @@ var curriculum_vitae = {
                 "Python",
                 "Javascript",
                 "Matlab",
-                "HTML",
-                "Java",
+                // "HTML",
+                // "Java",
             ],
             lingual: [
                 "English",
