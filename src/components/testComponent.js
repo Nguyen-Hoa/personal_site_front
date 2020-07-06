@@ -56,10 +56,6 @@ export default class SearchExampleStandard extends Component {
             <pre style={{ overflowX: 'auto' }}>
               {JSON.stringify(this.state, null, 2)}
             </pre>
-            <Header>Options</Header>
-            <pre style={{ overflowX: 'auto' }}>
-              {JSON.stringify(source, null, 2)}
-            </pre>
           </Segment>
         </Grid.Column>
       </Grid>
