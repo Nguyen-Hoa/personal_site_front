@@ -1,7 +1,7 @@
-import React, { useState, useReducer } from 'react';
+import React, { useReducer } from 'react';
 import './css/App.css';
 
-import { Button, Card, Container, Grid } from 'semantic-ui-react';
+import { Container, Grid, Item } from 'semantic-ui-react';
 
 import ContactMenu from "./components/Contact/ContactMenu";
 import SearchExampleStandard from "./components/testComponent";
@@ -30,28 +30,35 @@ export default function App() {
       <header className="App-header">
         Hoa Nguyen
         <ContactMenu/>
-        Work in progress...
-        <Container>
-            <Card
-              header="Employment and Experiences"
-              meta="My curriculum vitae"
-              onClick={() => dispatch({type:'cv'})}
-            />
+        <Grid container columns={3}>
+          <Grid.Row>
+            <Grid.Column>
+              <Item
+                header="Employment and Experiences"
+                content="My curriculum vitae"
+                onClick={() => dispatch({type:'cv'})}
+              />
+            </Grid.Column>
             
-            <Card
-              header="CV Search"
-              meta="Search engine for my curriculum vitae"
-              onClick={() => dispatch({type:'cv_search'})}
-            />
-
-            <Card
-              header="Notes on Feature Visualization"
-              meta="Markdown notes on the topic of visualizing neural networks"
-              href='https://nguyen-hoa.github.io/feature-vis/'
-              target="_blank" 
-              rel="noopener noreferrer"
-            />
-        </Container>
+            <Grid.Column>
+              <Item
+                header="CV Search"
+                content="Search engine for my curriculum vitae"
+                onClick={() => dispatch({type:'cv_search'})}
+              />
+            </Grid.Column>
+            
+            <Grid.Column>
+              <Item
+                header="Notes on Feature Visualization"
+                content="Markdown notes on the topic of visualizing neural networks"
+                href='https://nguyen-hoa.github.io/feature-vis/'
+                target="_blank" 
+                rel="noopener noreferrer"
+              />
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
       </header>
       <body>
         <Container>{state.curr_page}</Container>
@@ -59,3 +66,4 @@ export default function App() {
     </div>
   );      
 }
+
