@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
-import { Menu, Modal, Button } from 'semantic-ui-react'
-import { Link } from "react-router-dom"
+import React from 'react'
+import { Menu, Modal } from 'semantic-ui-react'
 
 import ContactMessage from './ContactMessage'
 
@@ -28,12 +27,6 @@ export default function ContactMenu () {
         trigger={<Menu.Item as='a' icon='mail'/>}
         header='Leave a message!'
         content={<ContactMessage/>}
-      />
-
-      <Menu.Item
-        as='a'
-        name="CV"
-        onClick={<Link to="/cv"/>}
       />
     </Menu>
   );
