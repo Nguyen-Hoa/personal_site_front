@@ -1,0 +1,18 @@
+.App {
+    font-family: 'Georgia', serif, 'Ubuntu', sans-serif;
+}
+.homepage-item-header{
+    cursor: pointer;
+    color: black;
+}
+
+.homepage-item-header div.header{
+    font-weight: bold;
+}
+
+.App-header h1{
+    padding-top: 1%;
+    font-family: 'Georgia', serif, 'Ubuntu', sans-serif;
+    font-size: x-large;
+}
+

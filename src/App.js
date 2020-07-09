@@ -28,13 +28,14 @@ export default function App() {
   return(
     <div className="App">
       <header className="App-header">
-        Hoa Nguyen
+        <h1>Hoa Nguyen</h1>
         <ContactMenu/>
-        <Grid container columns={3}>
+        <Grid container columns={3} celled>
           <Grid.Row>
             <Grid.Column>
               <Item
                 header="Employment and Experiences"
+                className="homepage-item-header"
                 content="My curriculum vitae"
                 onClick={() => dispatch({type:'cv'})}
               />
@@ -43,6 +44,7 @@ export default function App() {
             <Grid.Column>
               <Item
                 header="CV Search"
+                className="homepage-item-header"
                 content="Search engine for my curriculum vitae"
                 onClick={() => dispatch({type:'cv_search'})}
               />
@@ -51,6 +53,7 @@ export default function App() {
             <Grid.Column>
               <Item
                 header="Notes on Feature Visualization"
+                className="homepage-item-header"
                 content="Markdown notes on the topic of visualizing neural networks"
                 href='https://nguyen-hoa.github.io/feature-vis/'
                 target="_blank" 

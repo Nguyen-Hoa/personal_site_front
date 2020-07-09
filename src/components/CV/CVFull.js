@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import './../../css/CVFull.css'
 import { Container, } from 'semantic-ui-react';
 import BaseCVRender from ".//BaseCVRender";
 import { 
@@ -23,7 +24,7 @@ export default class CVFull extends Component {
 
     render(){
         return(
-            <Container>
+            <Container className="CVFull">
                 <h1>Employment</h1>
                 <BaseCVRender 
                     content={this.props.cv.employment}

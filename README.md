@@ -7,8 +7,8 @@
 
 ## To-do
 
-* Clean up item boxes {Bold Header, Font Family, More Obviously Clickable}
 * Disconnect Items component from metadata, while retaining reducer functionality
+* Contact Me: sends an email to me.
 
 ### CVSearch
 

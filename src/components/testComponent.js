@@ -4,6 +4,7 @@ import { Search, Grid, Header, Segment, Label } from 'semantic-ui-react'
 
 import CVSearch from './CV/CVSearch'
 import curriculum_vitae from './../assets/cv'
+import CVFull from './CV/CVFull'
 
 const initialState = { isLoading: false, results: [], value: '' }
 const source = curriculum_vitae;
@@ -39,20 +40,20 @@ export default class SearchExampleStandard extends Component {
         <Grid.Column width={6}>
           <Search
             loading={isLoading}
-            onResultSelect={this.handleResultSelect}
+            //onResultSelect={this.handleResultSelect}
             onSearchChange={_.debounce(this.handleSearchChange, 500, {
               leading: true,
             })}
-            results={results}
-            resultRenderer={resultRenderer}
-            value={value}
+            //results={results}
+            //resultRenderer={resultRenderer}
+            //value={value}
             {...this.props}
           />
         </Grid.Column>
 
         <Grid.Column width={10}>
           <Segment>
-            <Header>State</Header>
+            <Header>Results</Header>
             <pre style={{ overflowX: 'auto' }}>
               {JSON.stringify(this.state, null, 2)}
             </pre>
