@@ -23,11 +23,17 @@ export default function ContactMenu () {
         rel="noopener noreferrer"
       />
 
-      <Modal
+      <Menu.Item
+        as='a'
+        icon='mail'
+        href='mailto:hoaaaoh@gmail.com'
+      />
+
+      {/* <Modal
         trigger={<Menu.Item as='a' icon='mail'/>}
         header='Leave a message!'
         content={<ContactMessage/>}
-      />
+      /> */}
     </Menu>
   );
 }
