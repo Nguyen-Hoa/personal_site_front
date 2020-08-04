@@ -54,10 +54,10 @@ export default function App() {
 
             <Grid.Column>
               <Item
-                header="Notes on Feature Visualization"
+                header="Activation Maximization"
                 className="homepage-item-header"
-                content="Markdown notes on the topic of visualizing neural networks"
-                href='https://nguyen-hoa.github.io/feature-vis/'
+                content="A simple technique to visualize features learned by artificial neural networks"
+                href='https://nguyen-hoa.github.io/feature-vis/topics/activation_maximization.html'
                 target="_blank" 
                 rel="noopener noreferrer"
               />
