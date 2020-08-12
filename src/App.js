@@ -57,7 +57,7 @@ export default function App() {
                 header="Activation Maximization"
                 className="homepage-item-header"
                 content="A simple technique to visualize features learned by artificial neural networks"
-                href='https://nguyen-hoa.github.io/feature-vis/topics/activation_maximization.html'
+                href='https://github.com/Nguyen-Hoa/Activation-Maximization'
                 target="_blank" 
                 rel="noopener noreferrer"
               />
