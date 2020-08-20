@@ -8,15 +8,26 @@ import SearchExampleStandard from "./components/testComponent";
 import CVFull from "./components/CV/CVFull";
 import curriculum_vitae from "./assets/cv";
 
-const page = {curr_page: <p></p>};
+const pageState = {curr_page: 'blank'};
 
+function page_render(curr_page) {
+  switch (curr_page) {
+    case 'cv':
+      return <CVFull cv={curriculum_vitae}/>
+    default:
+      return <p></p>
+  }
+}
 
 function page_reducer(state, action){
   switch (action.type) {
     case 'cv':
-      return {curr_page: <CVFull cv={curriculum_vitae}/>}
-    case 'cv_search':
-      return {curr_page: <SearchExampleStandard/>}
+      if (state.curr_page == 'cv')
+        return {curr_page: 'blank'}
+      else 
+        return {curr_page: 'cv'}
+    // case 'cv_search':
+    //   return {curr_page: <SearchExampleStandard/>}
     default:
       throw new Error();
   }
@@ -24,7 +35,7 @@ function page_reducer(state, action){
 
 export default function App() {
 
-  const [state, dispatch] = useReducer(page_reducer, page)
+  const [state, dispatch] = useReducer(page_reducer, pageState)
 
   return(
     <div className="App">
@@ -52,6 +63,16 @@ export default function App() {
             </Grid.Column>
              */}
 
+            {/* <Grid.Column>
+              <Item
+                header="Neuron Visualization"
+                className="homepage-item-header"
+                content="Using ThreeJS to draw neurons"
+                // onClick={() => dispatch({type:'cv_search'})}
+              />
+            </Grid.Column> */}
+            
+
             <Grid.Column>
               <Item
                 header="Activation Maximization"
@@ -66,7 +87,7 @@ export default function App() {
         </Grid>
       </header>
       <body>
-        <Container>{state.curr_page}</Container>
+        <Container>{page_render(state.curr_page)}</Container>
       </body>
     </div>
   );      
