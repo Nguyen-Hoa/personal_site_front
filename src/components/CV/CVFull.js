@@ -13,10 +13,6 @@ import {
 
 export default class CVFull extends Component {
 
-    constructor(props){
-        super(props);
-    }
-
     /*Dev
         DOM should only be width of text, not screen
         Able to fit elsewhere

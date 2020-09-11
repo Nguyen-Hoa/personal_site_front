@@ -1,7 +1,7 @@
 import React from 'react'
-import { Menu, Modal } from 'semantic-ui-react'
+import { Menu } from 'semantic-ui-react'
 
-import ContactMessage from './ContactMessage'
+// import ContactMessage from './ContactMessage'
 
 export default function ContactMenu () {
   return (

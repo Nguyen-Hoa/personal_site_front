@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import {Segment} from 'semantic-ui-react';
 
 export default class BaseCVRender extends Component{
-    constructor(props){
-        super(props);
-    }
 
     render(){
         return(

@@ -4,7 +4,8 @@ import './css/App.css';
 import { Container, Grid, Item } from 'semantic-ui-react';
 
 import ContactMenu from "./components/Contact/ContactMenu";
-import SearchExampleStandard from "./components/testComponent";
+import NeuronVisualization from "./components/Neurons/NeuronVisualization";
+// import SearchExampleStandard from "./components/testComponent";
 import CVFull from "./components/CV/CVFull";
 import curriculum_vitae from "./assets/cv";
 
@@ -14,6 +15,8 @@ function page_render(curr_page) {
   switch (curr_page) {
     case 'cv':
       return <CVFull cv={curriculum_vitae}/>
+    case 'neuron_vis':
+      return <NeuronVisualization/>
     default:
       return <p></p>
   }
@@ -22,10 +25,15 @@ function page_render(curr_page) {
 function page_reducer(state, action){
   switch (action.type) {
     case 'cv':
-      if (state.curr_page == 'cv')
+      if (state.curr_page ==='cv')
         return {curr_page: 'blank'}
-      else 
+      else
         return {curr_page: 'cv'}
+    case 'neuron_vis':
+      if (state.curr_page === 'neuron_vis')
+        return {curr_page: 'blank'}
+      else
+        return {curr_page: 'neuron_vis'}
     // case 'cv_search':
     //   return {curr_page: <SearchExampleStandard/>}
     default:
@@ -68,11 +76,10 @@ export default function App() {
                 header="Neuron Visualization"
                 className="homepage-item-header"
                 content="Using ThreeJS to draw neurons"
-                // onClick={() => dispatch({type:'cv_search'})}
+                onClick={() => dispatch({type:'neuron_vis'})}
               />
             </Grid.Column> */}
             
-
             <Grid.Column>
               <Item
                 header="Activation Maximization"
@@ -84,11 +91,15 @@ export default function App() {
               />
             </Grid.Column>
           </Grid.Row>
+        
+          {/* <Grid.Row>
+          </Grid.Row> */}
+        
         </Grid>
       </header>
-      <body>
+      <div>
         <Container>{page_render(state.curr_page)}</Container>
-      </body>
+      </div>
     </div>
   );      
 }

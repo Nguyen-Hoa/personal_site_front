@@ -4,11 +4,11 @@ import { Search, Grid, Header, Segment, Label } from 'semantic-ui-react'
 
 import CVSearch from './CV/CVSearch'
 import curriculum_vitae from './../assets/cv'
-import CVFull from './CV/CVFull'
+// import CVFull from './CV/CVFull'
 
 const initialState = { isLoading: false, results: [], value: '' }
-const source = curriculum_vitae;
-const resultRenderer = (result) => <Label content={result.location} />
+// const source = curriculum_vitae;
+// const resultRenderer = (result) => <Label content={result.location} />
 const SearchEngine = new CVSearch();
 
 export default class SearchExampleStandard extends Component {
@@ -33,7 +33,7 @@ export default class SearchExampleStandard extends Component {
   }
 
   render() {
-    const { isLoading, value, results } = this.state
+    const { isLoading } = this.state
 
     return (
       <Grid>
