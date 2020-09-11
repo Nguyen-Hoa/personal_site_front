@@ -16,7 +16,11 @@ var curriculum_vitae = {
                     year: "2020",
                 },
             },
-            description: [],
+            description: [
+                'Computer Science Major',
+                'Founding Member and Vice President of Skate Club',
+                'ACM Student Leadership',
+            ],
         },
 
         {
@@ -51,11 +55,15 @@ var curriculum_vitae = {
                     year: "2020",
                 },
             },
-            description: [],
+            description: [
+                'Maintain professional attitude through all responsibilities and interactions with staff and students.',
+                'Lead up to 50 students in classroom interviews to share about their experiences with the curriculum.',
+                'Communicate with instructors from all disciplines to develop more engaging curriculum from collected data.',
+            ],
         },
 
         {
-            location: "McSwain Elemntary School",
+            location: "McSwain Elementary School",
             position: "GATE Instructor",
             time: {
                 start: {
@@ -67,11 +75,13 @@ var curriculum_vitae = {
                     year: "2019",
                 },
             },
-            description: [],
+            description: [
+                'Teach students grades 4-7 basic computer theory and programming.'
+            ],
         },
 
         {
-            location: "Indiana University, Bloomington",
+            location: "Indiana University, Bloomington: ProHealth",
             position: "Undergraduate Computer Vision Researcher",
             time: {
                 start: {
@@ -83,7 +93,30 @@ var curriculum_vitae = {
                     year: "2019",
                 },
             },
-            description: [],
+            description: [
+                'Compile a survey paper on image classification and health informatics.',
+                'Train state-of-the-art image classifier on private data set of 3000 food images, with average 90% accuracy.',
+                'Present research poster at Indiana University Summer Symposium.',
+            ],
+        },
+
+        {
+            location: "University of California, Merced: Wan Du Lab",
+            position: "Researcher Assistant",
+            time: {
+                start: {
+                    month: "November",
+                    year: "2018",
+                },
+                end: {
+                    month: "May",
+                    year: "2019",
+                },
+            },
+            description: [
+                'Present research paper implementations about topics in sensor networks.',
+                'Implement novel low level network protocols for LoRaWAN in Linux-based system in C++ and Python.',
+            ],
         },
     ],
 
@@ -103,12 +136,11 @@ var curriculum_vitae = {
     skills: {
         languages: {
             programming: [
-                "C++",
                 "Python",
+                "C++",
                 "Javascript",
-                "Matlab",
-                // "HTML",
-                // "Java",
+                "MATLAB",
+                "MySQL",
             ],
             lingual: [
                 "English",
@@ -121,11 +153,13 @@ var curriculum_vitae = {
                 "GLSL",
             ],
             machine_learning: [
-                "Tensorflow",
+                "PyTorch",
                 "Numpy",
+                "SQL",
             ],
             web: [
                 "React",
+                "REST",
                 "Django",
             ],
             misc: [],

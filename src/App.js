@@ -50,13 +50,13 @@ export default function App() {
       <header className="App-header">
         <h1>Hoa Nguyen</h1>
         <ContactMenu/>
-        <Grid container columns={2} celled>
+        <Grid container columns={3} celled>
           <Grid.Row>
             <Grid.Column>
               <Item
                 header="Employment and Experiences"
                 className="homepage-item-header"
-                content="My curriculum vitae"
+                content="Resumé"
                 onClick={() => dispatch({type:'cv'})}
               />
             </Grid.Column>
@@ -71,14 +71,14 @@ export default function App() {
             </Grid.Column>
              */}
 
-            {/* <Grid.Column>
+            <Grid.Column>
               <Item
                 header="Neuron Visualization"
                 className="homepage-item-header"
                 content="Using ThreeJS to draw neurons"
                 onClick={() => dispatch({type:'neuron_vis'})}
               />
-            </Grid.Column> */}
+            </Grid.Column>
             
             <Grid.Column>
               <Item
