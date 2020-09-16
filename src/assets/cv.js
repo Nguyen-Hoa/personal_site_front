@@ -56,9 +56,9 @@ var curriculum_vitae = {
                 },
             },
             description: [
-                'Maintain professional attitude through all responsibilities and interactions with staff and students.',
-                'Lead up to 50 students in classroom interviews to share about their experiences with the curriculum.',
-                'Communicate with instructors from all disciplines to develop more engaging curriculum from collected data.',
+                'Maintained professional attitude through all responsibilities and interactions with staff and students.',
+                'Led up to 50 students in classroom interviews to share about their experiences with the curriculum.',
+                'Communicated with instructors from all disciplines to develop more engaging curriculum from collected data.',
             ],
         },
 
@@ -94,9 +94,9 @@ var curriculum_vitae = {
                 },
             },
             description: [
-                'Compile a survey paper on image classification and health informatics.',
-                'Train state-of-the-art image classifier on private data set of 3000 food images, with average 90% accuracy.',
-                'Present research poster at Indiana University Summer Symposium.',
+                'Compiled a survey paper on image classification and health informatics.',
+                'Trained state-of-the-art image classifier on private data set of 3000 food images, with average 90% accuracy.',
+                'Presented research poster at Indiana University Summer Symposium.',
             ],
         },
 
@@ -114,8 +114,8 @@ var curriculum_vitae = {
                 },
             },
             description: [
-                'Present research paper implementations about topics in sensor networks.',
-                'Implement novel low level network protocols for LoRaWAN in Linux-based system in C++ and Python.',
+                'Developed efficient tools to parse structured HVAC data for reinforcement learning algorithms.',
+                'Implemented novel low level network protocols for LoRaWAN in Linux-based system in C++ and Python.',
             ],
         },
     ],
