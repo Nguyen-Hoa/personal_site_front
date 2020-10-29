@@ -17,7 +17,6 @@ var curriculum_vitae = {
                 },
             },
             description: [
-                'Computer Science Major',
                 'Founding Member and Vice President of Skate Club',
                 'ACM Student Leadership',
             ],
@@ -28,11 +27,11 @@ var curriculum_vitae = {
             position: "Master of Science",
             time: {
                 start: {
-                    month: "August",
-                    year: "2020",
+                    month: "January",
+                    year: "2021",
                 },
                 end: {
-                    month: "May",
+                    month: "December",
                     year: "2022",
                 },
             },
@@ -42,6 +41,23 @@ var curriculum_vitae = {
 
     /* Employment */
     employment: [
+        {
+            location: "UC Merced MoCA Lab",
+            position: "Graduate Research Assistant",
+            time: {
+                start: {
+                    month: "October",
+                    year: "2020",
+                },
+                end: {
+                    month: "Current",
+                    year: " ",
+                },
+            },
+            description: [
+            ],
+        },
+
         {
             location: "UC Merced, Center for Engaged Teaching and Learning",
             position: "SATAL Intern",
@@ -56,9 +72,8 @@ var curriculum_vitae = {
                 },
             },
             description: [
-                'Maintained professional attitude through all responsibilities and interactions with staff and students.',
+                'Maintain program website in Drupal7 environment utilizing HTML, CSS and Javascript.',
                 'Led up to 50 students in classroom interviews to share about their experiences with the curriculum.',
-                'Communicated with instructors from all disciplines to develop more engaging curriculum from collected data.',
             ],
         },
 
@@ -94,9 +109,9 @@ var curriculum_vitae = {
                 },
             },
             description: [
-                'Compiled a survey paper on image classification and health informatics.',
-                'Trained state-of-the-art image classifier on private data set of 3000 food images, with average 90% accuracy.',
-                'Presented research poster at Indiana University Summer Symposium.',
+                'Present poster on image classification and health informatics.',
+                'Curate a hand-labeled dataset of over 3000 food images called HoosierMommies.',
+                'Train state-of-the-art image classifiers in PyTorch for private data-set, average of 90% accuracy.',
             ],
         },
 
@@ -114,8 +129,8 @@ var curriculum_vitae = {
                 },
             },
             description: [
-                'Developed efficient tools to parse structured HVAC data for reinforcement learning algorithms.',
-                'Implemented novel low level network protocols for LoRaWAN in Linux-based system in C++ and Python.',
+                'Develop Pandas tools that efficiently parse building HVAC data for reinforcement learning algorithms.',
+                'Implement link quality estimation algorithms in embedded devices and Linux based system.',
             ],
         },
     ],
@@ -123,13 +138,14 @@ var curriculum_vitae = {
     /* Awards */
     awards: [
         {
-            organization: "UC Merced, Innovate to Grow",
-            title: "1st Place, Mobile App Challenge",
+            organization: "Innovate to Grow, Mobile App Challenge",
+            title: "1st Place Winner for Eye Tracking Telemedicine App",
             date: {
                 month: "December", 
                 year: "2019",
             },
-            description: [],
+            description: [
+            ],
         }
     ],
 
@@ -155,12 +171,15 @@ var curriculum_vitae = {
             machine_learning: [
                 "PyTorch",
                 "Numpy",
-                "SQL",
+                "Pandas",
             ],
             web: [
                 "React",
                 "REST",
+                "SQL",
                 "Django",
+                "MongoDB",
+                "Docker",
             ],
             misc: [],
         }

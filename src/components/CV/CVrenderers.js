@@ -3,7 +3,7 @@ import React from 'react';
 export function render_employment (item) {
     return (
         <div className="Employment">
-        <div> {item.location} </div>
+        <h4> {item.location} </h4>
         <div> {item.position} </div>
         <div> From: {item.time.start.month} {item.time.start.year} </div>
         <div> To: {item.time.end.month} {item.time.end.year} </div>
@@ -17,7 +17,7 @@ export function render_employment (item) {
 export function render_education (item) {
     return (
         <div className="Education">
-        <div> {item.location} </div>
+        <h4> {item.location} </h4>
         <div> {item.position} </div>
         <div> From: {item.time.start.month} {item.time.start.year} </div>
         <div> To: {item.time.end.month} {item.time.end.year} </div>
@@ -31,7 +31,7 @@ export function render_education (item) {
 export function render_awards (item) {
     return(
         <div className="Awards">
-            <div>{item.organization}</div>
+            <h4>{item.organization}</h4>
             <div>{item.title}</div>
             <div>Received: {item.date.month} {item.date.year}</div>
             <ul>
