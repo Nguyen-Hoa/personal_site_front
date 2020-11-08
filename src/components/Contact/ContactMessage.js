@@ -1,27 +1,17 @@
 import React, {useState} from 'react';
 import {sendMail} from './../APIs/mail_api';
 import {
-  Button,
   Form,
   Input,
   TextArea,
   Segment,
 } from 'semantic-ui-react';
 
-// Reset (blank) the Textfields after message send
-const reset_fields = () => {
-  document.getElementById('name').value = '';
-  document.getElementById('retaddr').value ='';
-  document.getElementById('message').value = '';
-}
-
 export default function ContactMessage (){
   const [ret_addr, setRetAddr] = useState('');
   const [body, setBody] = useState('');
   const [name, setName] = useState('');
-  const [email_err_msg, setEEM] = useState('');
-  const [email_valid, setEmailInvalid] = useState(false);
-
+  const [invalid_email, setEmailInvalid] = useState(false);
 
   function handleSubmit (e) {
     e.preventDefault();
@@ -56,55 +46,60 @@ export default function ContactMessage (){
         console.log('Copy to sender failed to send.');
       });
       
-      reset_fields();
+      setName('');
+      setBody('');
+      setRetAddr('');
   }
 
   function ValidateEmail(inputText) {
     var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if (inputText.match(mailformat)) {
-      setEEM('');
       setEmailInvalid(false);
       setRetAddr(inputText);
       return true;
     } 
+    else if (inputText === ''){
+      setEmailInvalid(false);
+      setRetAddr(inputText);
+      return true;
+    }
     else {
-      setEEM('Enter a valid email.');
       setEmailInvalid(true);
+      setRetAddr(inputText);
       return false;
     }
   }
 
   return (
   <Segment>
-      <Form>
+      <Form onSubmit={handleSubmit}>
           <Form.Group widths='equal'>
           <Form.Field
-              id='name'
+              id='name-field'
               control={Input}
               placeholder='Contact Name'
-              autoComplete='off'
+              value={name}
               onChange={e => setName(e.target.value)}
           />
           <Form.Field
-              id='retaddt'
+              id='retaddr-field'
               control={Input}
-              error={email_valid}
-              helperText={email_err_msg}
+              error={invalid_email ? 'Please enter a valid email': false} 
               placeholder='Return E-mail Address'
-              autoComplete='off'
-              onChange={e => setRetAddr(e.target.value)}
+              value={ret_addr}
+              onChange={e => ValidateEmail(e.target.value)}
           />
           </Form.Group>
           
           <Form.Field
-              id='body'
+              id='body-field'
               control={TextArea}
-              placeholder="What is up?"
-              autoComplete='off'
+              placeholder="Message"
+              value={body}
               onChange={e => setBody(e.target.value)}
           />
 
-          <Form.Field control={Button}>Send</Form.Field>
+          <Form.Button content='Send' disabled={name === '' || body === '' || invalid_email}/>
       </Form>
     </Segment>
   )

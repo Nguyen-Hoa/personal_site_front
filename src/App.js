@@ -45,8 +45,11 @@ export default function App() {
   return(
     <div className="App">
       <header className="App-header">
-        <h1>Hoa Nguyen</h1>
+        <h1><a href='/'>Hoa Nguyen</a></h1>
         <ContactMenu/>
+      </header>
+
+      <div>
         <Grid container columns={3} celled>
           <Grid.Row>
             <Grid.Column>
@@ -80,8 +83,6 @@ export default function App() {
           </Grid.Row>
 
         </Grid>
-      </header>
-      <div>
         <Container>{page_render(state.curr_page)}</Container>
       </div>
     </div>

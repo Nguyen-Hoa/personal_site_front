@@ -4,7 +4,6 @@ const API_URL = 'https://nguyen-hoa.com/api';
 const sendMail = function(msg) {
     const dest = `${API_URL}/sendmail`
 
-    console.log(msg);
     return axios({
         method: 'post',
         url: dest,
