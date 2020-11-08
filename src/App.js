@@ -5,7 +5,6 @@ import { Container, Grid, Item } from 'semantic-ui-react';
 
 import ContactMenu from "./components/Contact/ContactMenu";
 import NeuronVisualization from "./components/Neurons/NeuronVisualization";
-// import SearchExampleStandard from "./components/testComponent";
 import CVFull from "./components/CV/CVFull";
 import curriculum_vitae from "./assets/cv";
 
@@ -34,8 +33,6 @@ function page_reducer(state, action){
         return {curr_page: 'blank'}
       else
         return {curr_page: 'neuron_vis'}
-    // case 'cv_search':
-    //   return {curr_page: <SearchExampleStandard/>}
     default:
       throw new Error();
   }
@@ -61,16 +58,6 @@ export default function App() {
               />
             </Grid.Column>
 
-            {/* <Grid.Column>
-              <Item
-                header="CV Search"
-                className="homepage-item-header"
-                content="Search engine for my curriculum vitae"
-                onClick={() => dispatch({type:'cv_search'})}
-              />
-            </Grid.Column>
-             */}
-
             <Grid.Column>
               <Item
                 header="Neuron Visualization"
@@ -91,10 +78,7 @@ export default function App() {
               />
             </Grid.Column>
           </Grid.Row>
-        
-          {/* <Grid.Row>
-          </Grid.Row> */}
-        
+
         </Grid>
       </header>
       <div>

@@ -1,7 +1,7 @@
 import React from 'react'
-import { Menu } from 'semantic-ui-react'
+import { Menu, Modal } from 'semantic-ui-react'
 
-// import ContactMessage from './ContactMessage'
+import ContactMessage from './ContactMessage'
 
 export default function ContactMenu () {
   return (
@@ -23,17 +23,18 @@ export default function ContactMenu () {
         rel="noopener noreferrer"
       />
 
-      <Menu.Item
+      {/* <Menu.Item
         as='a'
         icon='mail'
         href='mailto:hoaaaoh@gmail.com'
+      /> */}
+
+      <Modal
+        trigger={<Menu.Item as='a' icon='mail'/>}
+        header='Leave a message'
+        content={<ContactMessage/>}
       />
 
-      {/* <Modal
-        trigger={<Menu.Item as='a' icon='mail'/>}
-        header='Leave a message!'
-        content={<ContactMessage/>}
-      /> */}
     </Menu>
   );
 }
