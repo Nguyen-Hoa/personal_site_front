@@ -20,7 +20,7 @@ export default function ContactMessage (){
     sendMail(JSON.stringify({
       'to': 'hoaaaoh@gmail.com',
       'from': 'hoaaaoh@gmail.com', // Sendgrid API Verified sender.
-      'subject': `Investocracy Contact, a message from ${name}`,
+      'subject': `nguyen-hoa.com, a message from ${name}`,
       'text': `${body} \n \n Reply to ${ret_addr}`,
     }))
       .then(() => {
@@ -35,8 +35,8 @@ export default function ContactMessage (){
     sendMail(JSON.stringify({
       'to': ret_addr,
       'from': 'hoaaaoh@gmail.com', // Sendgrid API Verified sender.
-      'subject': `Investocracy Contact, a message from ${name}`,
-      'text': `This is a copy of the message you sent to Investocracy \n \n ${body} \n \n Reply to ${ret_addr}`,
+      'subject': `COPY OF MESSAGE TO nguyen-hoa.com`,
+      'text': `This is a copy of the message you sent to nguyen-hoa.com \n \n ${body} \n \n Reply to ${ret_addr}`,
     }))
       .then(() => {
         console.log('Copy sent to sender.');

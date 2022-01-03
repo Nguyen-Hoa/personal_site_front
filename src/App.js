@@ -49,7 +49,7 @@ export default function App() {
         <ContactMenu/>
       </header>
 
-      <div>
+      <div className="item-grid">
         <Grid container columns={3} celled>
           <Grid.Row>
             <Grid.Column>
@@ -61,20 +61,30 @@ export default function App() {
               />
             </Grid.Column>
 
-            <Grid.Column>
+            {/* <Grid.Column>
               <Item
                 header="Neuron Visualization"
                 className="homepage-item-header"
                 content="Using ThreeJS to draw neurons"
                 onClick={() => dispatch({type:'neuron_vis'})}
               />
+            </Grid.Column> */}
+            <Grid.Column>
+              <Item
+                header="Datespot.love"
+                className="homepage-item-header"
+                content="Lead developer, constantly trying on new hats."
+                href='https://datespot.love'
+                target="_blank" 
+                rel="noopener noreferrer"
+              />
             </Grid.Column>
-            
+
             <Grid.Column>
               <Item
                 header="Activation Maximization"
                 className="homepage-item-header"
-                content="A simple technique to visualize features learned by artificial neural networks"
+                content="A simple technique to visualize features learned by artificial neural networks."
                 href='https://github.com/Nguyen-Hoa/Activation-Maximization'
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -82,6 +92,18 @@ export default function App() {
             </Grid.Column>
           </Grid.Row>
 
+          <Grid.Row>
+            <Grid.Column>
+              <Item
+                header="Who is skating?"
+                className="homepage-item-header"
+                content="A web app to help students of UC Merced find someone to skate with."
+                href='https://ucmskate.com/whoisskating'
+                target="_blank" 
+                rel="noopener noreferrer"
+              />
+            </Grid.Column>
+          </Grid.Row>
         </Grid>
         <Container>{page_render(state.curr_page)}</Container>
       </div>

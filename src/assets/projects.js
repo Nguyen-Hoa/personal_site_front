@@ -9,7 +9,7 @@ const homepage_items = [
     {
         header:"CV Search",
         content:"Search engine for my curriculum vitae",
-        //onClick:{() :> dispatch({type:'cv_search'})},
+        // onClick:() => dispatch({type:'cv_search'}),
     },
     {
         header:"Employment and Experiences",

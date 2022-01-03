@@ -4,7 +4,7 @@ import ContactMessage from './ContactMessage'
 
 export default function ContactMenu () {
   return (
-    <Menu icon>
+    <Menu icon style={{justifyContent: 'center'}}>
 
       <Menu.Item
         as='a' 

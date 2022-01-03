@@ -43,7 +43,7 @@ var curriculum_vitae = {
     employment: [
         {
             location: "UC Merced MoCA Lab",
-            position: "Graduate Research Assistant",
+            position: "Graduate Student Researcher (GSR)",
             time: {
                 start: {
                     month: "October",
@@ -55,6 +55,29 @@ var curriculum_vitae = {
                 },
             },
             description: [
+                'Explore novel load balancing methods for reducing power consumption of datacenters using machine learning.',
+                'Prototype Docker load balancing network test bed among 5 Linux servers.',
+                'Develop and train neural networks in Tensorflow for predicting power consumption of physical servers.'
+            ],
+        },
+
+        {
+            location: "Consulting: DateSpot.love, Ad-Vital",
+            position: "Lead Developer, Software Developer",
+            time: {
+                start: {
+                    month: "November",
+                    year: "2020",
+                },
+                end: {
+                    month: "Current",
+                    year: " ",
+                },
+            },
+            description: [
+                'Collaborate in remote teams to deliver QA-tested web applications for business solutions in a timely manner.',
+                'Maintain website uptime and meet quality of service terms, while organizing weekly sprints to introduce new features.',
+                'Develop serverless solutions to meet business requirements using AWS, Firebase, and Google Cloud'
             ],
         },
 
@@ -109,7 +132,7 @@ var curriculum_vitae = {
                 },
             },
             description: [
-                'Present poster on image classification and health informatics.',
+                'Collaborate with faculty and students of the computer vision and health informatics labs to compile a survey paper on deep learning models used for nutrition assistance.',
                 'Curate a hand-labeled dataset of over 3000 food images called HoosierMommies.',
                 'Train state-of-the-art image classifiers in PyTorch for private data-set, average of 90% accuracy.',
             ],
@@ -156,7 +179,7 @@ var curriculum_vitae = {
                 "C++",
                 "Javascript",
                 "MATLAB",
-                "MySQL",
+                "SQL",
             ],
             lingual: [
                 "English",
@@ -170,6 +193,7 @@ var curriculum_vitae = {
             ],
             machine_learning: [
                 "PyTorch",
+                "Tensorflow",
                 "Numpy",
                 "Pandas",
             ],
@@ -177,7 +201,6 @@ var curriculum_vitae = {
                 "React",
                 "REST",
                 "SQL",
-                "Django",
                 "MongoDB",
                 "Docker",
             ],
