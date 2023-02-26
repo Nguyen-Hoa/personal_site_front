@@ -7,32 +7,33 @@ import ContactMenu from "./components/Contact/ContactMenu";
 import NeuronVisualization from "./components/Neurons/NeuronVisualization";
 import CVFull from "./components/CV/CVFull";
 import curriculum_vitae from "./assets/cv";
+import { ReactComponent as Hoa } from "./assets/geometric_name.svg";
 
-const pageState = {curr_page: 'blank'};
+const pageState = { curr_page: 'blank' };
 
 function page_render(curr_page) {
   switch (curr_page) {
     case 'cv':
-      return <CVFull cv={curriculum_vitae}/>
+      return <CVFull cv={curriculum_vitae} />
     case 'neuron_vis':
-      return <NeuronVisualization/>
+      return <NeuronVisualization />
     default:
       return <p></p>
   }
 }
 
-function page_reducer(state, action){
+function page_reducer(state, action) {
   switch (action.type) {
     case 'cv':
-      if (state.curr_page ==='cv')
-        return {curr_page: 'blank'}
+      if (state.curr_page === 'cv')
+        return { curr_page: 'blank' }
       else
-        return {curr_page: 'cv'}
+        return { curr_page: 'cv' }
     case 'neuron_vis':
       if (state.curr_page === 'neuron_vis')
-        return {curr_page: 'blank'}
+        return { curr_page: 'blank' }
       else
-        return {curr_page: 'neuron_vis'}
+        return { curr_page: 'neuron_vis' }
     default:
       throw new Error();
   }
@@ -42,11 +43,11 @@ export default function App() {
 
   const [state, dispatch] = useReducer(page_reducer, pageState)
 
-  return(
+  return (
     <div className="App">
       <header className="App-header">
-        <h1><a href='/'>Hoa Nguyen</a></h1>
-        <ContactMenu/>
+        <a href='/'><Hoa /></a>
+        <ContactMenu />
       </header>
 
       <div className="item-grid">
@@ -57,7 +58,7 @@ export default function App() {
                 header="Employment and Experiences"
                 className="homepage-item-header"
                 content="Resumé"
-                onClick={() => dispatch({type:'cv'})}
+                onClick={() => dispatch({ type: 'cv' })}
               />
             </Grid.Column>
 
@@ -75,7 +76,7 @@ export default function App() {
                 className="homepage-item-header"
                 content="Lead developer, constantly trying on new hats."
                 href='https://datespot.love'
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               />
             </Grid.Column>
@@ -86,7 +87,7 @@ export default function App() {
                 className="homepage-item-header"
                 content="A simple technique to visualize features learned by artificial neural networks."
                 href='https://github.com/Nguyen-Hoa/Activation-Maximization'
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               />
             </Grid.Column>
@@ -99,7 +100,7 @@ export default function App() {
                 className="homepage-item-header"
                 content="A web app to help students of UC Merced find someone to skate with."
                 href='https://ucmskate.com/whoisskating'
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               />
             </Grid.Column>
@@ -108,6 +109,6 @@ export default function App() {
         <Container>{page_render(state.curr_page)}</Container>
       </div>
     </div>
-  );      
+  );
 }
 
