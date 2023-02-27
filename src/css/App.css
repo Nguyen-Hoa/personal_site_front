@@ -2,13 +2,13 @@
     font-family: 'Georgia', serif, 'Ubuntu', sans-serif;
 }
 
-.homepage-item-header{
+.homepage-item-header {
     cursor: pointer;
     color: black;
     background-color: transparent;
 }
 
-.homepage-item-header div.header{
+.homepage-item-header div.header {
     font-weight: bold;
 }
 
@@ -16,16 +16,23 @@
     justify-content: center;
 } */
 
-.App-header h1{
+.App-header h1 {
     padding-top: 1%;
     font-family: 'Georgia', serif, 'Ubuntu', sans-serif;
     font-size: x-large;
 }
 
-.App-header h1 a{
+.App-header h1 a {
     color: black;
 }
 
 .item-grid {
     background-color: white;
+}
+
+.logo-svg {
+    position: relative;
+    left: 50%;
+    margin-top: 20%;
+    transform: translate(-50%, -50%);
 }
